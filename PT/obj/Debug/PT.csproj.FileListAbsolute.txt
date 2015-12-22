@@ -8,3 +8,5 @@ E:\Documents\GitHub\Programming_technologies-IW-\PT\obj\Debug\PT.Result.resource
 E:\Documents\GitHub\Programming_technologies-IW-\PT\obj\Debug\PT.csproj.GenerateResource.Cache
 E:\Documents\GitHub\Programming_technologies-IW-\PT\obj\Debug\PT.exe
 E:\Documents\GitHub\Programming_technologies-IW-\PT\obj\Debug\PT.pdb
+E:\Documents\GitHub\Programming_technologies-IW-\PT\obj\Debug\PT.About.resources
+E:\Documents\GitHub\Programming_technologies-IW-\PT\obj\Debug\PT.Settings.resources
