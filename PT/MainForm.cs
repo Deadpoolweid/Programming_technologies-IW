@@ -25,9 +25,6 @@ namespace PT
         private void Result_Click(object sender, EventArgs e)
         {
             this.Enabled = false;
-
-            Input.main(tFunction.Text,double.Parse(t_a.Text), double.Parse(t_b.Text),double.Parse(t_e.Text));
-            Core.Find_x();
             Result r = new Result();
             r.ShowDialog();
             this.Enabled = true;
