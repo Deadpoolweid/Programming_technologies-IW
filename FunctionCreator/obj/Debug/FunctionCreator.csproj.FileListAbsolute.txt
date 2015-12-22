@@ -1,0 +1,5 @@
+E:\Documents\GitHub\Programming_technologies-IW-\FunctionCreator\bin\Debug\FunctionCreator.dll
+E:\Documents\GitHub\Programming_technologies-IW-\FunctionCreator\bin\Debug\FunctionCreator.pdb
+E:\Documents\GitHub\Programming_technologies-IW-\FunctionCreator\obj\Debug\FunctionCreator.csprojResolveAssemblyReference.cache
+E:\Documents\GitHub\Programming_technologies-IW-\FunctionCreator\obj\Debug\FunctionCreator.dll
+E:\Documents\GitHub\Programming_technologies-IW-\FunctionCreator\obj\Debug\FunctionCreator.pdb

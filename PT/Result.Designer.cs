@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.x = new System.Windows.Forms.Label();
+            this.l_x = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -64,27 +64,28 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Корень уравнения - ";
             // 
-            // x
+            // l_x
             // 
-            this.x.AutoSize = true;
-            this.x.Location = new System.Drawing.Point(207, 52);
-            this.x.Name = "x";
-            this.x.Size = new System.Drawing.Size(12, 13);
-            this.x.TabIndex = 3;
-            this.x.Text = "x";
+            this.l_x.AutoSize = true;
+            this.l_x.Location = new System.Drawing.Point(207, 52);
+            this.l_x.Name = "l_x";
+            this.l_x.Size = new System.Drawing.Size(12, 13);
+            this.l_x.TabIndex = 3;
+            this.l_x.Text = "x";
             // 
             // Result
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 166);
-            this.Controls.Add(this.x);
+            this.Controls.Add(this.l_x);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Result";
             this.Text = "Результат";
+            this.Load += new System.EventHandler(this.Result_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,6 +96,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label x;
+        private System.Windows.Forms.Label l_x;
     }
 }

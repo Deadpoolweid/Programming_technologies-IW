@@ -1,0 +1,4 @@
+e:\documents\visual studio 2015\Projects\FunctionCreator\bin\Release\FunctionCreator.dll
+e:\documents\visual studio 2015\Projects\FunctionCreator\bin\Release\FunctionCreator.pdb
+e:\documents\visual studio 2015\Projects\FunctionCreator\obj\Release\FunctionCreator.dll
+e:\documents\visual studio 2015\Projects\FunctionCreator\obj\Release\FunctionCreator.pdb

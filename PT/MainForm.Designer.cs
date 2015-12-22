@@ -37,10 +37,10 @@
             this.случайныеДанныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.настройкиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.f = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tFunction = new System.Windows.Forms.TextBox();
+            this.t_a = new System.Windows.Forms.TextBox();
+            this.t_b = new System.Windows.Forms.TextBox();
+            this.t_e = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -113,33 +113,33 @@
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
-            // f
+            // tFunction
             // 
-            this.f.Location = new System.Drawing.Point(122, 38);
-            this.f.Name = "f";
-            this.f.Size = new System.Drawing.Size(100, 20);
-            this.f.TabIndex = 1;
+            this.tFunction.Location = new System.Drawing.Point(122, 38);
+            this.tFunction.Name = "tFunction";
+            this.tFunction.Size = new System.Drawing.Size(100, 20);
+            this.tFunction.TabIndex = 1;
             // 
-            // textBox2
+            // t_a
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(46, 20);
-            this.textBox2.TabIndex = 2;
+            this.t_a.Location = new System.Drawing.Point(122, 74);
+            this.t_a.Name = "t_a";
+            this.t_a.Size = new System.Drawing.Size(46, 20);
+            this.t_a.TabIndex = 2;
             // 
-            // textBox3
+            // t_b
             // 
-            this.textBox3.Location = new System.Drawing.Point(222, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(42, 20);
-            this.textBox3.TabIndex = 3;
+            this.t_b.Location = new System.Drawing.Point(222, 74);
+            this.t_b.Name = "t_b";
+            this.t_b.Size = new System.Drawing.Size(42, 20);
+            this.t_b.TabIndex = 3;
             // 
-            // textBox4
+            // t_e
             // 
-            this.textBox4.Location = new System.Drawing.Point(164, 120);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
+            this.t_e.Location = new System.Drawing.Point(164, 120);
+            this.t_e.Name = "t_e";
+            this.t_e.Size = new System.Drawing.Size(100, 20);
+            this.t_e.TabIndex = 4;
             // 
             // label1
             // 
@@ -205,10 +205,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.f);
+            this.Controls.Add(this.t_e);
+            this.Controls.Add(this.t_b);
+            this.Controls.Add(this.t_a);
+            this.Controls.Add(this.tFunction);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -225,10 +225,10 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
-        private System.Windows.Forms.TextBox f;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tFunction;
+        private System.Windows.Forms.TextBox t_a;
+        private System.Windows.Forms.TextBox t_b;
+        private System.Windows.Forms.TextBox t_e;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
