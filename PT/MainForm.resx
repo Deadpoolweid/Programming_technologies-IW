@@ -120,4 +120,24 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAA
+        AAD////+/v7+/v79/f39/Pz6+fn39fX29PT49vX7+vr8/Pz9/f3+/v7+/v7+/v7////+/v7+/v79/f36
+        +fnr5uXRycOvoJOTf2yRfGmgi3nJu7Hx7uz9/f3+/v7+/v7////+/v79/f39/Pzs6OfNxsGijXp5VTFx
+        SyVySyV5USl/WDGwmYP28/L9/f3+/v7////+/v79/f39/Pzs6Oi1oZCAWTJ7UypxSCFtRR5ySSF3TyaL
+        ZDzPva39/f3+/v7+/v7+/v7+/v79/f3g182OaUNySSFqQBVpQBZsQxpySiBxRx18UiibeVbr5d3+/v7+
+        /v7+/v79/f36+vmaellvRRtlOxJgOBBXMQtWMAhgNw5uQxh5TSGXcEm+p4/9/f3+/v7+/v79/f3g181x
+        SyRoQBhrQhhoPhJmPRVlPBNiOAxsPhBtQBKTaD2hfVj8+/r+/v7////9/f3q6eNjWzdcNxNzTCVpQBh2
+        TiV6TiGMYDOCUyN6ShqKWy2WbEL39fH+/v7////+/v79/f2vvqlbgFtQUC1ERSpRMxJgNgyAUyaFVyeT
+        YzKbbkC7n4D9/f3+/v7+/v7+/v79/f37+/p/e1pPYD0wXkIhJx06SzJYTzJeQiJxVzWmmX/t8Oz9/v3+
+        /v7////+/v7+/v7D1cp6oYiitaBUfF0dMCItUDlmg3BGbFOPoZbk5+X6+/v+/v7+/v7+/v7+/v7+/v79
+        /f39/f39/f3A0cYlSDNhjHB3m4S7zMI2ZUiTqpv4+fn9/v7+/v7+/v7////////////+/v79/f37+/tc
+        fGn1+PbX3dnx9PLw8/Lj6Ob3+fj+/v7+/v7////////+/v7+/v7+/v79/f2WrJ/G1Mz8/f39/f39/f39
+        /f3+/v7+/v7+/v7+/v7////////+/v79/f39/f2nuq6xx7n8/f3+/v7////////////////+/v7+/v7/
+        ///+/v7+/v79/f33+PeTr56/08f8/f3+/v7+/v7////+/v7+/v7+/v7+/v7+/v7///8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
+  </data>
 </root>
