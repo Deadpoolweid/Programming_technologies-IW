@@ -43,14 +43,6 @@ namespace PT
             this.Enabled = true;
         }
 
-        private void настройкиToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Settings s = new Settings();
-            this.Enabled = false;
-            s.ShowDialog();
-            this.Enabled = true;
-        }
-
         private void вToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FileDialog fd = new OpenFileDialog();
@@ -65,13 +57,11 @@ namespace PT
                 bool match2 = Regex.IsMatch(text[1], @"^from -?\d+ to -?\d+$");
                 bool match3 = Regex.IsMatch(text[2], @"^epsilon = \d+$");
 
-
-                //MessageBox.Show("m1 = " + match1 + ", m2 = " + match2 + ", m3 = " + match3 +"");
                 if (match1 && match2 && match3)
                 {
                     string fx = Regex.Replace(text[0], @"[f\(x\) = ]{7}", "").ToString();
-                    string from = Regex.Match(text[1], @"\d+").ToString();
-                    string to = Regex.Match(text[1], @"\d+$").ToString();
+                    string from = Regex.Match(text[1], @"[-]?\d+").ToString();
+                    string to = Regex.Match(text[1], @"[-]?\d+$").ToString();
                     string epsilon = Regex.Match(text[2], @"\d+$").ToString();
 
                     tFunction.Text = fx;
@@ -90,6 +80,14 @@ namespace PT
                 MessageBox.Show("Произошла ошибка при открытии файла.");
             }
 
+        }
+
+        private void bSettings_Click(object sender, EventArgs e)
+        {
+            Settings s = new Settings();
+            this.Enabled = false;
+            s.ShowDialog();
+            this.Enabled = true;
         }
     }
 }

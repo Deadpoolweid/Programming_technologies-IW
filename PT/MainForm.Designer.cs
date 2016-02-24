@@ -33,9 +33,7 @@
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.случайныеДанныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.настройкиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tFunction = new System.Windows.Forms.TextBox();
             this.t_a = new System.Windows.Forms.TextBox();
@@ -56,7 +54,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.настройкиToolStripMenuItem,
+            this.bSettings,
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -87,27 +85,12 @@
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
-            // настройкиToolStripMenuItem
+            // bSettings
             // 
-            this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.случайныеДанныеToolStripMenuItem,
-            this.настройкиToolStripMenuItem1});
-            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
-            this.настройкиToolStripMenuItem.Text = "Параметры";
-            // 
-            // случайныеДанныеToolStripMenuItem
-            // 
-            this.случайныеДанныеToolStripMenuItem.Name = "случайныеДанныеToolStripMenuItem";
-            this.случайныеДанныеToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.случайныеДанныеToolStripMenuItem.Text = "Случайные данные";
-            // 
-            // настройкиToolStripMenuItem1
-            // 
-            this.настройкиToolStripMenuItem1.Name = "настройкиToolStripMenuItem1";
-            this.настройкиToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
-            this.настройкиToolStripMenuItem1.Text = "Настройки";
-            this.настройкиToolStripMenuItem1.Click += new System.EventHandler(this.настройкиToolStripMenuItem1_Click);
+            this.bSettings.Name = "bSettings";
+            this.bSettings.Size = new System.Drawing.Size(83, 20);
+            this.bSettings.Text = "Параметры";
+            this.bSettings.Click += new System.EventHandler(this.bSettings_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -250,11 +233,9 @@
         private System.Windows.Forms.Button Result;
         private System.Windows.Forms.ToolStripMenuItem вToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bSettings;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ToolStripMenuItem случайныеДанныеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem1;
         private System.Windows.Forms.Panel panel1;
     }
 }
