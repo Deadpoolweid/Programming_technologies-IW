@@ -21,5 +21,10 @@ namespace PT
         {
             this.Close();
         }
+
+        private void Result_Load(object sender, EventArgs e)
+        {
+            l_x.Text = Convert.ToString(Output.main());
+        }
     }
 }
