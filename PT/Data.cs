@@ -32,7 +32,7 @@ namespace PT
         /// <summary>
         /// Погрешность
         /// </summary>
-        public static double e;
+        public static int e;
 
         /// <summary>
         /// Искомый корень

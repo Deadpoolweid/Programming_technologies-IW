@@ -11,12 +11,13 @@ namespace PT
 {
     class Input
     {
-        static public void main(string function,double a, double b, double e)
+        static public void main(string function,double a, double b, int e)
         {
             Data.f = FunctionCreator.buildFunc(function);
             Data.a = a;
             Data.b = b;
             Data.e = e;
+            Data.c = a + (Math.Abs(b - a)/2d);
         }
     }
 }

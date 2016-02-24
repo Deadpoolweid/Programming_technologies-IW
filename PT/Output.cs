@@ -10,7 +10,8 @@ namespace PT
     {
         public static double main()
         {
-            return Data.x;
+
+            return Math.Round(Data.x,Data.e);
         }
     }
 }

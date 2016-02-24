@@ -26,7 +26,7 @@ namespace PT
         {
             this.Enabled = false;
 
-            Input.main(tFunction.Text,double.Parse(t_a.Text), double.Parse(t_b.Text),double.Parse(t_e.Text));
+            Input.main(tFunction.Text,double.Parse(t_a.Text), double.Parse(t_b.Text),int.Parse(t_e.Text));
             Core.Find_x();
             Result r = new Result();
             r.ShowDialog();
