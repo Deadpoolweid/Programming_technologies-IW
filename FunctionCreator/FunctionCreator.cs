@@ -5,18 +5,18 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using Microsoft.CSharp;
 
-namespace Functions
+namespace FunctionCreator
 {
     public class FunctionCreator
     {
-        public static Func<double, double> f;
+        public static Func<double, double> F;
 
         /// <summary>
         /// Находит совпадения из строки в библиотеке Math
         /// </summary>
         /// <param name="s">Строка с функцией</param>
         /// <returns></returns>
-        private static string getName(string s)
+        private static string GetName(string s)
         {
             return typeof(Math).GetMembers().First(m => m.Name.ToLower().Equals(s.ToLower())).Name;
         }
@@ -26,7 +26,7 @@ namespace Functions
         /// </summary>
         /// <param name="f">Исходная строка с функцией</param>
         /// <returns></returns>
-        private static bool hasFunc(string f)
+        private static bool HasFunc(string f)
         {
             return typeof(Math).GetMembers().Any(m => m.Name.ToLower().Equals(f.ToLower()));
         }
@@ -36,19 +36,21 @@ namespace Functions
         /// </summary>
         /// <param name="code"></param>
         /// <returns></returns>
-        static Assembly compile(string code)
+        private static Assembly Compile(string code)
         {
             CodeDomProvider provider = new CSharpCodeProvider();
-            CompilerParameters cp = new CompilerParameters();
-            cp.GenerateExecutable = false;
-            cp.GenerateInMemory = true;
-            cp.IncludeDebugInformation = false;
+            CompilerParameters cp = new CompilerParameters
+            {
+                GenerateExecutable = false,
+                GenerateInMemory = true,
+                IncludeDebugInformation = false
+            };
             cp.ReferencedAssemblies.Add("System.dll");
             cp.ReferencedAssemblies.Add("System.Core.dll");
             CompilerResults cr = provider.CompileAssemblyFromSource(cp, code);//CompileAssemblyFromFile(cp, "script.cs");
             if (!cr.Errors.HasErrors)
                 return cr.CompiledAssembly;
-            else return null;
+            return null;
         }
 
         /// <summary>
@@ -56,9 +58,9 @@ namespace Functions
         /// </summary>
         /// <param name="f">Текст функции</param>
         /// <returns></returns>
-        public static Func<double, double> buildFunc(string f)
+        public static Func<double, double> BuildFunc(string f)
         {
-            f = Regex.Replace(f, @"(?<foo>\w+)", m => (hasFunc(m.Groups["foo"].Value) ? ("System.Math." + getName(m.Groups["foo"].Value)) : m.Groups["foo"].Value));
+            f = Regex.Replace(f, @"(?<foo>\w+)", m => (HasFunc(m.Groups["foo"].Value) ? ("System.Math." + GetName(m.Groups["foo"].Value)) : m.Groups["foo"].Value));
             string funcdef = @"
             namespace __temp
             {{
@@ -71,16 +73,15 @@ namespace Functions
               }}
             }}";
             funcdef = string.Format(funcdef, f);
-            Assembly ca = compile(funcdef);
+            Assembly ca = Compile(funcdef);
             Type[] t = ca.GetTypes();
             if (t.Length > 0)
             {
                 MethodInfo mi = t[0].GetMethod("__func", BindingFlags.Static | BindingFlags.Public);
                 if (mi == null) throw new Exception("error while compilation");
-                try { return (Func<double, double>)Delegate.CreateDelegate(typeof(Func<double, double>), mi); }
-                catch (Exception ex) { throw ex; }
+                return (Func<double, double>)Delegate.CreateDelegate(typeof(Func<double, double>), mi);
             }
-            else throw new Exception("error while compilation");
+            throw new Exception("error while compilation");
         }
     }
 }

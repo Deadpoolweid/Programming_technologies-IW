@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PT
@@ -26,21 +19,21 @@ namespace PT
 
         private void Result_Click(object sender, EventArgs e)
         {
-            this.Enabled = false;
+            Enabled = false;
 
-            Input.main(tFunction.Text,double.Parse(t_a.Text), double.Parse(t_b.Text),int.Parse(t_e.Text));
+            Input.Main(tFunction.Text,double.Parse(t_a.Text), double.Parse(t_b.Text),int.Parse(t_e.Text));
             Core.Find_x();
             Result r = new Result();
             r.ShowDialog();
-            this.Enabled = true;
+            Enabled = true;
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             About a = new About();
-            this.Enabled = false;
+            Enabled = false;
             a.ShowDialog();
-            this.Enabled = true;
+            Enabled = true;
         }
 
         private void вToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,7 +52,7 @@ namespace PT
 
                 if (match1 && match2 && match3)
                 {
-                    string fx = Regex.Replace(text[0], @"[f\(x\) = ]{7}", "").ToString();
+                    string fx = Regex.Replace(text[0], @"[f\(x\) = ]{7}", "");
                     string from = Regex.Match(text[1], @"[-]?\d+").ToString();
                     string to = Regex.Match(text[1], @"[-]?\d+$").ToString();
                     string epsilon = Regex.Match(text[2], @"\d+$").ToString();
@@ -71,13 +64,13 @@ namespace PT
                 }
                 else
                 {
-                    MessageBox.Show("Данные в указанном файле имеет неверный формат.");
+                    MessageBox.Show(@"Данные в указанном файле имеет неверный формат.");
                 }
 
             }
             else
             {
-                MessageBox.Show("Произошла ошибка при открытии файла.");
+                MessageBox.Show(@"Произошла ошибка при открытии файла.");
             }
 
         }
@@ -85,9 +78,9 @@ namespace PT
         private void bSettings_Click(object sender, EventArgs e)
         {
             Settings s = new Settings();
-            this.Enabled = false;
+            Enabled = false;
             s.ShowDialog();
-            this.Enabled = true;
+            Enabled = true;
         }
     }
 }

@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PT
 {
-    class Output
+    static class Output
     {
-        public static double main()
+        public static double Main()
         {
             if (Data.x < Data.a || Data.x > Data.b)
             {

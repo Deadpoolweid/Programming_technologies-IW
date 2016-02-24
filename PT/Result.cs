@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -20,7 +14,7 @@ namespace PT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void Result_Load(object sender, EventArgs e)
@@ -44,13 +38,13 @@ namespace PT
 
             chart1.Series["F(x)"].Points.DataBindXY(axisXData, axisYData);
 
-            double _out = Output.main();
+            double _out = Output.Main();
             if (double.IsNaN(_out))
             {
                 l_x.Text = @"Не принадлежит указанному иннтервалу, либо не существует.";
                 return;
             }
-            l_x.Text = Convert.ToString(_out);
+            l_x.Text = Convert.ToString(_out, CultureInfo.InvariantCulture);
         }
     }
 }

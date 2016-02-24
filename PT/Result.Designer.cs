@@ -1,11 +1,15 @@
-﻿namespace PT
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+
+namespace PT
 {
     partial class Result
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -63,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(102, 312);
+            this.label1.Location = new System.Drawing.Point(12, 310);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 13);
             this.label1.TabIndex = 2;
@@ -72,7 +76,7 @@
             // l_x
             // 
             this.l_x.AutoSize = true;
-            this.l_x.Location = new System.Drawing.Point(217, 312);
+            this.l_x.Location = new System.Drawing.Point(127, 310);
             this.l_x.Name = "l_x";
             this.l_x.Size = new System.Drawing.Size(12, 13);
             this.l_x.TabIndex = 3;
@@ -123,11 +127,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label l_x;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private Button button1;
+        private Button button2;
+        private Label label1;
+        private Label l_x;
+        private Panel panel1;
+        private Chart chart1;
     }
 }
