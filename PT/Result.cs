@@ -24,7 +24,13 @@ namespace PT
 
         private void Result_Load(object sender, EventArgs e)
         {
-            l_x.Text = Convert.ToString(Output.main());
+            double _out = Output.main();
+            if (double.IsNaN(_out))
+            {
+                l_x.Text = @"Не принадлежит указанному иннтервалу, либо не существует.";
+                return;
+            }
+            l_x.Text = Convert.ToString(_out);
         }
     }
 }

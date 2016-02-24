@@ -47,7 +47,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Result = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -58,7 +60,7 @@
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(327, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(317, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,6 +78,7 @@
             this.вToolStripMenuItem.Name = "вToolStripMenuItem";
             this.вToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.вToolStripMenuItem.Text = "Открыть файл";
+            this.вToolStripMenuItem.Click += new System.EventHandler(this.вToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
@@ -115,45 +118,45 @@
             // 
             // tFunction
             // 
-            this.tFunction.Location = new System.Drawing.Point(122, 38);
+            this.tFunction.Location = new System.Drawing.Point(63, 16);
             this.tFunction.Name = "tFunction";
-            this.tFunction.Size = new System.Drawing.Size(100, 20);
+            this.tFunction.Size = new System.Drawing.Size(218, 20);
             this.tFunction.TabIndex = 1;
             // 
             // t_a
             // 
-            this.t_a.Location = new System.Drawing.Point(122, 74);
+            this.t_a.Location = new System.Drawing.Point(113, 49);
             this.t_a.Name = "t_a";
-            this.t_a.Size = new System.Drawing.Size(46, 20);
+            this.t_a.Size = new System.Drawing.Size(69, 20);
             this.t_a.TabIndex = 2;
             // 
             // t_b
             // 
-            this.t_b.Location = new System.Drawing.Point(222, 74);
+            this.t_b.Location = new System.Drawing.Point(213, 49);
             this.t_b.Name = "t_b";
-            this.t_b.Size = new System.Drawing.Size(42, 20);
+            this.t_b.Size = new System.Drawing.Size(68, 20);
             this.t_b.TabIndex = 3;
             // 
             // t_e
             // 
-            this.t_e.Location = new System.Drawing.Point(164, 120);
+            this.t_e.Location = new System.Drawing.Point(113, 94);
             this.t_e.Name = "t_e";
-            this.t_e.Size = new System.Drawing.Size(100, 20);
+            this.t_e.Size = new System.Drawing.Size(69, 20);
             this.t_e.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 41);
+            this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "f(x)";
+            this.label1.Text = "f(x) =";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 77);
+            this.label2.Location = new System.Drawing.Point(31, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 6;
@@ -162,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(180, 74);
+            this.label3.Location = new System.Drawing.Point(188, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 13);
             this.label3.TabIndex = 7;
@@ -171,7 +174,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(69, 120);
+            this.label4.Location = new System.Drawing.Point(18, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 8;
@@ -179,7 +182,7 @@
             // 
             // Result
             // 
-            this.Result.Location = new System.Drawing.Point(98, 170);
+            this.Result.Location = new System.Drawing.Point(89, 145);
             this.Result.Name = "Result";
             this.Result.Size = new System.Drawing.Size(124, 23);
             this.Result.TabIndex = 9;
@@ -189,26 +192,35 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(72, 226);
+            this.progressBar1.Location = new System.Drawing.Point(63, 201);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(198, 23);
             this.progressBar1.TabIndex = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tFunction);
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.t_a);
+            this.panel1.Controls.Add(this.Result);
+            this.panel1.Controls.Add(this.t_b);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.t_e);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(317, 243);
+            this.panel1.TabIndex = 11;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 261);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.Result);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.t_e);
-            this.Controls.Add(this.t_b);
-            this.Controls.Add(this.t_a);
-            this.Controls.Add(this.tFunction);
+            this.ClientSize = new System.Drawing.Size(317, 267);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -216,6 +228,8 @@
             this.Text = "Решение нелинейных уравнений";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,6 +255,7 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ToolStripMenuItem случайныеДанныеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
