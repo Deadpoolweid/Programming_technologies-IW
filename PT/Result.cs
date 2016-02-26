@@ -28,9 +28,9 @@ namespace PT
 
 
             int n = Convert.ToInt32(Math.Abs(Data.b - Data.a));
-            double[] axisXData = new double[n];
-            double[] axisYData = new double[n];
-            for (int i = 0; i < n; i++)
+            double[] axisXData = new double[n+1];
+            double[] axisYData = new double[n+1];
+            for (int i = 0; i <= n; i++)
             {
                 axisXData[i] = Data.a + i;
                 axisYData[i] = Data.f(Data.a + i);
@@ -53,7 +53,7 @@ namespace PT
         {
             SaveFileDialog sf = new SaveFileDialog();
             sf.DefaultExt = ".jpeg";
-            sf.Filter = @"Изображение (*.jpeg)";
+            sf.Filter = @"Изображение (*.jpeg)|.jpeg";
             
             if (sf.ShowDialog() == DialogResult.OK)
             {
