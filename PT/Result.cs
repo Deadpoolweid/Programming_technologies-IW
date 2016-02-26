@@ -38,6 +38,8 @@ namespace PT
 
             chart1.Series["F(x)"].Points.DataBindXY(axisXData, axisYData);
 
+
+
             double _out = Output.Main();
             if (double.IsNaN(_out))
             {
@@ -45,6 +47,20 @@ namespace PT
                 return;
             }
             l_x.Text = Convert.ToString(_out, CultureInfo.InvariantCulture);
+        }
+
+        private void bSaveImage_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.DefaultExt = ".jpeg";
+            sf.Filter = @"Изображение (*.jpeg)";
+            
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                string filename = sf.FileName;
+                chart1.SaveImage(filename,ChartImageFormat.Jpeg);
+            }
+
         }
     }
 }

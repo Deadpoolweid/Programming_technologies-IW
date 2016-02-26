@@ -40,6 +40,7 @@ namespace PT
             this.l_x = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.bSaveImage = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +48,7 @@ namespace PT
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(105, 376);
+            this.button1.Location = new System.Drawing.Point(46, 377);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -57,7 +58,7 @@ namespace PT
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(208, 376);
+            this.button2.Location = new System.Drawing.Point(149, 377);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -84,6 +85,7 @@ namespace PT
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bSaveImage);
             this.panel1.Controls.Add(this.chart1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.l_x);
@@ -107,6 +109,16 @@ namespace PT
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             this.chart1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
+            // 
+            // bSaveImage
+            // 
+            this.bSaveImage.Location = new System.Drawing.Point(252, 377);
+            this.bSaveImage.Name = "bSaveImage";
+            this.bSaveImage.Size = new System.Drawing.Size(131, 23);
+            this.bSaveImage.TabIndex = 5;
+            this.bSaveImage.Text = "Сохранить график";
+            this.bSaveImage.UseVisualStyleBackColor = true;
+            this.bSaveImage.Click += new System.EventHandler(this.bSaveImage_Click);
             // 
             // Result
             // 
@@ -133,5 +145,6 @@ namespace PT
         private Label l_x;
         private Panel panel1;
         private Chart chart1;
+        private Button bSaveImage;
     }
 }
