@@ -11,6 +11,11 @@ namespace PT
         public static Func<double, double> f;
 
         /// <summary>
+        /// Текст используемой функции
+        /// </summary>
+        public static string sFunction;
+
+        /// <summary>
         /// Левая граница интервала
         /// </summary>
         public static double a;

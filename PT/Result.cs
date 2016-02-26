@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Globalization;
+using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -61,6 +63,26 @@ namespace PT
                 chart1.SaveImage(filename,ChartImageFormat.Jpeg);
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.Filter = @"Текстовый документ(*.txt)|.txt|Докумет MS Word(*.doc)|.doc";
+
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                string filename = sf.FileName;
+                string[] text = {"F(x) = " + Data.sFunction,"Корень уравнения - " + l_x.Text};
+                if (sf.FilterIndex == 0)
+                {
+                    File.WriteAllLines(filename, text, Encoding.Unicode);
+                }
+                else
+                {
+                    
+                }
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace PT
             Input.Main(tFunction.Text,double.Parse(t_a.Text), double.Parse(t_b.Text),int.Parse(t_e.Text));
             Core.Find_x();
             Result r = new Result();
-            r.ShowDialog();
+            r.ShowDialog(this);
             Enabled = true;
         }
 
