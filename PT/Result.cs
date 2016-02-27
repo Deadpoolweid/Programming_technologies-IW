@@ -17,9 +17,8 @@ namespace PT
             Close();
         }
 
-        private void Result_Load(object sender, EventArgs e)
+        private void Draw()
         {
-
             chart1.ChartAreas.Add(new ChartArea("Default"));
 
             chart1.Series.Add(new Series("F(x)"));
@@ -28,15 +27,24 @@ namespace PT
 
 
             int n = Convert.ToInt32(Math.Abs(Data.b - Data.a));
-            double[] axisXData = new double[n+1];
-            double[] axisYData = new double[n+1];
+            double[] axisXData = new double[n + 1];
+            double[] axisYData = new double[n + 1];
             for (int i = 0; i <= n; i++)
             {
+                if (i<n && Data.f(Data.a + i) > double.MaxValue)
+                {
+                    throw new OverflowException();
+                }
                 axisXData[i] = Data.a + i;
                 axisYData[i] = Data.f(Data.a + i);
             }
 
             chart1.Series["F(x)"].Points.DataBindXY(axisXData, axisYData);
+        }
+
+        private void Result_Load(object sender, EventArgs e)
+        {
+                Draw();
 
 
 

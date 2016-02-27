@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -19,12 +20,32 @@ namespace PT
 
         private void Result_Click(object sender, EventArgs e)
         {
+            if (t_Function.Text == "" || t_a.Text == "" || t_b.Text == "" || t_e.Text == "")
+            {
+                MessageBox.Show("Заполните все поля.");
+                return;
+            }
+            if (t_a.ForeColor == Color.Red || t_b.ForeColor == Color.Red || t_e.ForeColor == Color.Red || t_Function.ForeColor == Color.Red)
+            {
+                MessageBox.Show("Неправильный ввод!");
+                return;
+            }
+
             Enabled = false;
 
-            Input.Main(tFunction.Text,double.Parse(t_a.Text), double.Parse(t_b.Text),int.Parse(t_e.Text));
+            Input.Main(t_Function.Text, double.Parse(t_a.Text), double.Parse(t_b.Text), int.Parse(t_e.Text));
             Core.Find_x();
             Result r = new Result();
-            r.ShowDialog();
+            try
+            {
+                r.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка при обработке функции. Попробуйте другие данные.");
+                throw;
+            }
+
             Enabled = true;
         }
 
@@ -57,7 +78,7 @@ namespace PT
                     string to = Regex.Match(text[1], @"[-]?\d+$").ToString();
                     string epsilon = Regex.Match(text[2], @"\d+$").ToString();
 
-                    tFunction.Text = fx;
+                    t_Function.Text = fx;
                     t_a.Text = from;
                     t_b.Text = to;
                     t_e.Text = epsilon;
@@ -81,6 +102,65 @@ namespace PT
             Enabled = false;
             s.ShowDialog();
             Enabled = true;
+        }
+
+        private void t_a_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(t_a.Text, @"^([-]?\d+(.\d+)?)$"))
+            {
+                t_a.ForeColor = Color.Green;
+            }
+            else
+            {
+                t_a.ForeColor = Color.Red;
+            }
+        }
+
+        private void t_b_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(t_b.Text, @"^([-]?\d+(.\d+)?)$"))
+            {
+                t_b.ForeColor = Color.Green;
+            }
+            else
+            {
+                t_b.ForeColor = Color.Red;
+            }
+        }
+
+        private void t_e_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(t_e.Text, @"^[-]?\d+$"))
+            {
+                t_e.ForeColor = Color.Green;
+            }
+            else
+            {
+                t_e.ForeColor = Color.Red;
+            }
+        }
+
+        private void t_Function_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Func<double,double> f = FunctionCreator.FunctionCreator.BuildFunc(t_Function.Text);
+            }
+            catch 
+            {
+                t_Function.ForeColor = Color.Red;
+                return;
+            }
+            t_Function.ForeColor =Color.Green;
+        }
+
+        private void Help_Click(object sender, EventArgs e)
+        {
+            PT.Help h = new Help();
+
+            this.Enabled = false;
+            h.ShowDialog();
+            this.Enabled = true;
         }
     }
 }

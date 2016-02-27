@@ -13,7 +13,16 @@ namespace PT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            try
+            {
+                Application.Run(new MainForm());
+            }
+            catch
+            {
+                MessageBox.Show(@"Произошла ошибка. Приложение будет закрыто. Нам жаль.");
+                throw;
+            }
         }
     }
 }
