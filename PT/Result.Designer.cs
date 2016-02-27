@@ -35,12 +35,12 @@ namespace PT
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Result));
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.l_x = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bSaveImage = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -56,15 +56,15 @@ namespace PT
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // bSave
             // 
-            this.button2.Location = new System.Drawing.Point(149, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Сохранить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bSave.Location = new System.Drawing.Point(149, 377);
+            this.bSave.Name = "bSave";
+            this.bSave.Size = new System.Drawing.Size(75, 23);
+            this.bSave.TabIndex = 1;
+            this.bSave.Text = "Сохранить";
+            this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
             // label1
             // 
@@ -91,12 +91,22 @@ namespace PT
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.l_x);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.bSave);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(421, 440);
             this.panel1.TabIndex = 4;
+            // 
+            // bSaveImage
+            // 
+            this.bSaveImage.Location = new System.Drawing.Point(252, 377);
+            this.bSaveImage.Name = "bSaveImage";
+            this.bSaveImage.Size = new System.Drawing.Size(131, 23);
+            this.bSaveImage.TabIndex = 5;
+            this.bSaveImage.Text = "Сохранить график";
+            this.bSaveImage.UseVisualStyleBackColor = true;
+            this.bSaveImage.Click += new System.EventHandler(this.bSaveImage_Click);
             // 
             // chart1
             // 
@@ -110,16 +120,6 @@ namespace PT
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             this.chart1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
-            // 
-            // bSaveImage
-            // 
-            this.bSaveImage.Location = new System.Drawing.Point(252, 377);
-            this.bSaveImage.Name = "bSaveImage";
-            this.bSaveImage.Size = new System.Drawing.Size(131, 23);
-            this.bSaveImage.TabIndex = 5;
-            this.bSaveImage.Text = "Сохранить график";
-            this.bSaveImage.UseVisualStyleBackColor = true;
-            this.bSaveImage.Click += new System.EventHandler(this.bSaveImage_Click);
             // 
             // Result
             // 
@@ -141,7 +141,7 @@ namespace PT
         #endregion
 
         private Button button1;
-        private Button button2;
+        private Button bSave;
         private Label label1;
         private Label l_x;
         private Panel panel1;
