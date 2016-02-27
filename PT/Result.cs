@@ -79,11 +79,6 @@ namespace PT
                 }
                 else
                 {
-                    //object wMissing = System.Reflection.Missing.Value;
-
-                    //object wTrue = true;
-                    //object wFalse = false;
-
                 }
             }
         }
