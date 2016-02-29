@@ -41,6 +41,7 @@ namespace PT
             this.panel1 = new System.Windows.Forms.Panel();
             this.bSaveImage = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +49,7 @@ namespace PT
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(46, 377);
+            this.button1.Location = new System.Drawing.Point(15, 377);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -58,9 +59,9 @@ namespace PT
             // 
             // bSave
             // 
-            this.bSave.Location = new System.Drawing.Point(149, 377);
+            this.bSave.Location = new System.Drawing.Point(184, 377);
             this.bSave.Name = "bSave";
-            this.bSave.Size = new System.Drawing.Size(75, 23);
+            this.bSave.Size = new System.Drawing.Size(75, 25);
             this.bSave.TabIndex = 1;
             this.bSave.Text = "Сохранить";
             this.bSave.UseVisualStyleBackColor = true;
@@ -86,12 +87,13 @@ namespace PT
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bSave);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.bSaveImage);
             this.panel1.Controls.Add(this.chart1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.l_x);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.bSave);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -100,7 +102,7 @@ namespace PT
             // 
             // bSaveImage
             // 
-            this.bSaveImage.Location = new System.Drawing.Point(252, 377);
+            this.bSaveImage.Location = new System.Drawing.Point(278, 377);
             this.bSaveImage.Name = "bSaveImage";
             this.bSaveImage.Size = new System.Drawing.Size(131, 23);
             this.bSaveImage.TabIndex = 5;
@@ -120,6 +122,18 @@ namespace PT
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             this.chart1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Текстовый документ (*.txt)",
+            "Документ Microsoft Word",
+            "Документ Microsoft Word(с графиком)"});
+            this.comboBox1.Location = new System.Drawing.Point(96, 379);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(91, 21);
+            this.comboBox1.TabIndex = 6;
             // 
             // Result
             // 
@@ -147,5 +161,6 @@ namespace PT
         private Panel panel1;
         private Chart chart1;
         private Button bSaveImage;
+        private ComboBox comboBox1;
     }
 }
