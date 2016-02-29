@@ -36,7 +36,6 @@ namespace PT
             Input.Main(t_Function.Text, double.Parse(t_a.Text), double.Parse(t_b.Text), int.Parse(t_e.Text));
             Core.Find_x();
             Result r = new Result();
-<<<<<<< HEAD
             try
             {
                 r.Show();
@@ -46,10 +45,6 @@ namespace PT
                 MessageBox.Show("Произошла ошибка при обработке функции. Попробуйте другие данные.");
                 throw;
             }
-
-=======
-            r.ShowDialog(this);
->>>>>>> refs/remotes/origin/ResultsSaving
             Enabled = true;
         }
 

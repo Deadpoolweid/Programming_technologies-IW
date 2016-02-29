@@ -24,11 +24,8 @@ namespace PT
 
         private void Draw()
         {
-<<<<<<< HEAD
-=======
             comboBox1.SelectedIndex = 2;
 
->>>>>>> refs/remotes/origin/ResultsSaving
             chart1.ChartAreas.Add(new ChartArea("Default"));
 
             chart1.Series.Add(new Series("F(x)"));

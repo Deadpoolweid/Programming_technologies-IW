@@ -14,15 +14,15 @@ namespace PT
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            try
-            {
+            //try
+            //{
                 Application.Run(new MainForm());
-            }
-            catch
-            {
-                MessageBox.Show(@"Произошла ошибка. Приложение будет закрыто. Нам жаль.");
-                throw;
-            }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show(@"Произошла ошибка. Приложение будет закрыто. Нам жаль.");
+            //    throw;
+            //}
         }
     }
 }
