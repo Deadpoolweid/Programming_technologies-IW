@@ -39,9 +39,14 @@ namespace PT
             this.вToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bSettings = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.Help = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.t_Function = new System.Windows.Forms.TextBox();
+=======
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tFunction = new System.Windows.Forms.TextBox();
+>>>>>>> refs/remotes/origin/ResultsSaving
             this.t_a = new System.Windows.Forms.TextBox();
             this.t_b = new System.Windows.Forms.TextBox();
             this.t_e = new System.Windows.Forms.TextBox();
@@ -98,6 +103,7 @@ namespace PT
             this.bSettings.Size = new System.Drawing.Size(83, 20);
             this.bSettings.Text = "Параметры";
             this.bSettings.Click += new System.EventHandler(this.bSettings_Click);
+<<<<<<< HEAD
             // 
             // Help
             // 
@@ -105,6 +111,8 @@ namespace PT
             this.Help.Size = new System.Drawing.Size(65, 20);
             this.Help.Text = "Справка";
             this.Help.Click += new System.EventHandler(this.Help_Click);
+=======
+>>>>>>> refs/remotes/origin/ResultsSaving
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -115,12 +123,20 @@ namespace PT
             // 
             // t_Function
             // 
+<<<<<<< HEAD
             this.t_Function.Location = new System.Drawing.Point(63, 16);
             this.t_Function.Name = "t_Function";
             this.t_Function.Size = new System.Drawing.Size(218, 20);
             this.t_Function.TabIndex = 1;
             this.t_Function.Text = "Pow(x,256)";
             this.t_Function.TextChanged += new System.EventHandler(this.t_Function_TextChanged);
+=======
+            this.tFunction.Location = new System.Drawing.Point(63, 16);
+            this.tFunction.Name = "tFunction";
+            this.tFunction.Size = new System.Drawing.Size(218, 20);
+            this.tFunction.TabIndex = 1;
+            this.tFunction.Text = "x*x";
+>>>>>>> refs/remotes/origin/ResultsSaving
             // 
             // t_a
             // 
@@ -129,7 +145,10 @@ namespace PT
             this.t_a.Size = new System.Drawing.Size(69, 20);
             this.t_a.TabIndex = 2;
             this.t_a.Text = "-10";
+<<<<<<< HEAD
             this.t_a.TextChanged += new System.EventHandler(this.t_a_TextChanged);
+=======
+>>>>>>> refs/remotes/origin/ResultsSaving
             // 
             // t_b
             // 
@@ -138,7 +157,10 @@ namespace PT
             this.t_b.Size = new System.Drawing.Size(68, 20);
             this.t_b.TabIndex = 3;
             this.t_b.Text = "10";
+<<<<<<< HEAD
             this.t_b.TextChanged += new System.EventHandler(this.t_b_TextChanged);
+=======
+>>>>>>> refs/remotes/origin/ResultsSaving
             // 
             // t_e
             // 
@@ -147,7 +169,10 @@ namespace PT
             this.t_e.Size = new System.Drawing.Size(69, 20);
             this.t_e.TabIndex = 4;
             this.t_e.Text = "2";
+<<<<<<< HEAD
             this.t_e.TextChanged += new System.EventHandler(this.t_e_TextChanged);
+=======
+>>>>>>> refs/remotes/origin/ResultsSaving
             // 
             // label1
             // 

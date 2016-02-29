@@ -6,6 +6,7 @@ namespace PT
     {
         public static void Main(string function,double a, double b, int e)
         {
+            Data.sFunction = function;
             Data.f = FunctionCreator.FunctionCreator.BuildFunc(function);
             Data.a = a;
             Data.b = b;
