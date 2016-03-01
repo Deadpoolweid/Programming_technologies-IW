@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NLog;
 
 namespace PT
 {
     public partial class Help : Form
     {
+        private static Logger log = LogManager.GetCurrentClassLogger();
         public Help()
         {
+            log.Info("Инициализация окна \"Справка\"");
             InitializeComponent();
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            log.Info("Закрытие окна \"Справка\"");
+            this.Close();
         }
     }
 }

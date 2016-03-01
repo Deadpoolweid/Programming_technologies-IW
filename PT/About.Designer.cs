@@ -45,8 +45,8 @@ namespace PT
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(325, 137);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Решение нелинейных уравнений(Методом Мюллера)\r\nv. 0.1\r\nРазработка и тестирование " +
-    "- Alex_Green©\r\nE-mail: Deadpoolweid@yandex.ru";
+            this.textBox1.Text = "Решение нелинейных уравнений(Методом Мюллера)\r\nv. 0.8 alpha\r\nРазработка и тестиро" +
+    "вание - Alex_Green©\r\nE-mail: Deadpoolweid@yandex.ru";
             // 
             // button1
             // 
