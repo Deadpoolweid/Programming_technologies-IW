@@ -57,6 +57,15 @@ namespace PT
             }
         }
 
+        private void SetTooltips()
+        {
+            ToolTip t = new ToolTip();
+            t.SetToolTip(chart1,"График введённой функции");
+            t.SetToolTip(bSaveImage,"Сохранение графика в указанную директорию");
+            t.SetToolTip(bSave,"Сохранение результатов в файл");
+            t.SetToolTip(button1,"Скрыть окно результатов");
+        }
+
         private void Result_Load(object sender, EventArgs e)
         {
             Draw();

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Windows.Forms;
+
 // ReSharper disable InconsistentNaming
 
 namespace PT
@@ -39,5 +41,22 @@ namespace PT
         /// Искомый корень
         /// </summary>
         public static double x;
+
+        /// <summary>
+        /// Прогресс вычисления
+        /// </summary>
+        public static int progress
+        {
+            get { return p; }
+            set
+            {
+                p = value;
+                mainform.progress = value;
+            }
+        }
+
+        private static int p;
+
+        public static MainForm mainform;
     }
 }
