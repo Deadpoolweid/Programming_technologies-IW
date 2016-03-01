@@ -49,15 +49,16 @@ namespace PT
                 return;
             }
 
-            Enabled = false;
-
             log.Info("Начало вычислений.");
             Input.Main(t_Function.Text, double.Parse(t_a.Text), double.Parse(t_b.Text), int.Parse(t_e.Text));
             Core.Find_x();
             Result r = new Result();
+            Data.progress += 10;
             try
             {
                 log.Info("Открытие окна с результатами.");
+                Enabled = false;
+                Data.progress += 10;
                 r.Show();
             }
             catch (Exception)
@@ -67,7 +68,9 @@ namespace PT
                 throw;
             }
             Enabled = true;
-            log.Info("Возврат к основному окну.");
+            progressBar1.Value = 0;
+            progress = 0;
+            Data.progress = 0;
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,7 +80,6 @@ namespace PT
             Enabled = false;
             a.ShowDialog();
             Enabled = true;
-            log.Info("Врзврат к основному окну.");
         }
 
         private void вToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,7 +147,6 @@ namespace PT
             Enabled = false;
             s.ShowDialog();
             Enabled = true;
-            log.Info("Возврат к основному окну.");
         }
 
         private void t_a_TextChanged(object sender, EventArgs e)
@@ -227,12 +228,29 @@ namespace PT
             this.Enabled = false;
             h.ShowDialog();
             this.Enabled = true;
-            log.Info("Возврат к основному окну.");
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             SetTooltips();
+            Data.mainform = this;
         }
+
+        public void OnChange()
+        {
+            progressBar1.Value = this.progress;
+        }
+
+        public int progress
+        {
+            get { return p; }
+            set
+            {
+                p = value;
+                OnChange();
+            }
+        }
+
+        private int p;
     }
 }
