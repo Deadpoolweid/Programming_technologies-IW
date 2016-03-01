@@ -227,8 +227,10 @@ namespace PT
             this.ClientSize = new System.Drawing.Size(317, 267);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Решение нелинейных уравнений";
             this.Load += new System.EventHandler(this.MainForm_Load);

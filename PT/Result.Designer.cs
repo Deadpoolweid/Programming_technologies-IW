@@ -39,9 +39,9 @@ namespace PT
             this.label1 = new System.Windows.Forms.Label();
             this.l_x = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.bSaveImage = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -100,6 +100,18 @@ namespace PT
             this.panel1.Size = new System.Drawing.Size(421, 440);
             this.panel1.TabIndex = 4;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Текстовый документ (*.txt)",
+            "Документ Microsoft Word",
+            "Документ Microsoft Word(с графиком)"});
+            this.comboBox1.Location = new System.Drawing.Point(96, 379);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(91, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
             // bSaveImage
             // 
             this.bSaveImage.Location = new System.Drawing.Point(278, 377);
@@ -123,25 +135,16 @@ namespace PT
             this.chart1.Text = "chart1";
             this.chart1.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.SystemDefault;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Текстовый документ (*.txt)",
-            "Документ Microsoft Word",
-            "Документ Microsoft Word(с графиком)"});
-            this.comboBox1.Location = new System.Drawing.Point(96, 379);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 21);
-            this.comboBox1.TabIndex = 6;
-            // 
             // Result
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 440);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Result";
             this.Text = "Результат";
             this.Load += new System.EventHandler(this.Result_Load);

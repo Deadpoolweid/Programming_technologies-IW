@@ -129,7 +129,13 @@
 - Экспонента в указанной степени - Exp(a), где a - степень
 - Натуральный логарифм - Log()
 - Десятичный логарифм - Log10()
-- Квадратный корень - Sqrt()</value>
+- Квадратный корень - Sqrt()
+
+Формат данных в текстовом файле:
+f(x) = "Функция без кавычек, введённая в соответствии с вышеуказанными правилами"
+from a to b
+epsilon = e
+Где a и b нижняя и верхняя границы интервала соответственно, e - погрешность вычислений</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

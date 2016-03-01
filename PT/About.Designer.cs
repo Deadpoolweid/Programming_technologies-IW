@@ -39,10 +39,10 @@ namespace PT
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(325, 137);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Решение нелинейных уравнений(Методом Мюллера)\r\nv. 0.8 alpha\r\nРазработка и тестиро" +
@@ -61,12 +61,15 @@ namespace PT
             // 
             // About
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 137);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "About";
             this.Text = "About";
             this.ResumeLayout(false);

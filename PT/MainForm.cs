@@ -42,11 +42,12 @@ namespace PT
                 MessageBox.Show("Заполните все поля.");
                 return;
             }
-            if (t_a.ForeColor == Color.Red || t_b.ForeColor == Color.Red || t_e.ForeColor == Color.Red || t_Function.ForeColor == Color.Red)
+            if (double.Parse(t_a.Text) > double.Parse(t_b.Text)||t_a.ForeColor == Color.Red || t_b.ForeColor == Color.Red || t_e.ForeColor == Color.Red || t_Function.ForeColor == Color.Red)
             {
-                log.Warn("Попытка вычислить результат при наличии ошибочно заполненных полей.");
-                MessageBox.Show("Неправильный ввод!");
-                return;
+                    log.Warn("Попытка вычислить результат при наличии ошибочно заполненных полей.");
+                    MessageBox.Show("Неправильный ввод!");
+                    return;                   
+
             }
 
             log.Info("Начало вычислений.");

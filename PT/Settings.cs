@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 using NLog;
 
@@ -17,6 +19,17 @@ namespace PT
         {
             log.Info("Закрытие окна \"Настройки\"");
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("log.txt");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText("log.txt","");
+            MessageBox.Show("log файл успешно очищен.");
         }
     }
 }
