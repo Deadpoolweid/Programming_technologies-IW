@@ -18,6 +18,16 @@ namespace PT
             InitializeComponent();
         }
 
+        private void SetTooltips()
+        {
+            ToolTip t = new ToolTip();
+            t.SetToolTip(t_Function,"Функция для решения");
+            t.SetToolTip(t_a,"Нижняя граница интервала");
+            t.SetToolTip(t_b,"Верхняя граница интервала");
+            t.SetToolTip(t_e, "Погрешность при вычислениях");
+            t.SetToolTip(Result,"Вычисление корня уравнения");
+        }
+
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             log.Info("Выход из приложения.");
@@ -218,6 +228,11 @@ namespace PT
             h.ShowDialog();
             this.Enabled = true;
             log.Info("Возврат к основному окну.");
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            SetTooltips();
         }
     }
 }
