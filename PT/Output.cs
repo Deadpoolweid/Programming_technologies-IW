@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PT
 {
-    class Output
+    static class Output
     {
-        public static double main()
+        public static double Main()
         {
-            return Data.x;
+            if (Data.x < Data.a || Data.x > Data.b)
+            {
+                return double.NaN;
+            }
+            return Math.Round(Data.x,Data.e);
         }
     }
 }

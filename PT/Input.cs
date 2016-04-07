@@ -1,22 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Functions;
 
 namespace PT
 {
-    class Input
+    static class Input
     {
-        static public void main(string function,double a, double b, double e)
+        public static void Main(string function,double a, double b, int e)
         {
-            Data.f = FunctionCreator.buildFunc(function);
+            Data.sFunction = function;
+            Data.progress += 10;
+            Data.f = FunctionCreator.FunctionCreator.BuildFunc(function);
+            Data.progress += 10;
             Data.a = a;
+            Data.progress += 10;
             Data.b = b;
+            Data.progress += 10;
             Data.e = e;
+            Data.progress += 10;
+            Data.c = a + (Math.Abs(b - a)/2d);
+            Data.progress += 10;
         }
     }
 }

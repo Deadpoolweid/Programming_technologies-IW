@@ -1,18 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
+
+// ReSharper disable InconsistentNaming
 
 namespace PT
 {
-    class Data
+    internal static class Data
     {
         /// <summary>
         /// Используемая функция
         /// </summary>
         public static Func<double, double> f;
+
+        /// <summary>
+        /// Текст используемой функции
+        /// </summary>
+        public static string sFunction;
 
         /// <summary>
         /// Левая граница интервала
@@ -32,11 +35,28 @@ namespace PT
         /// <summary>
         /// Погрешность
         /// </summary>
-        public static double e;
+        public static int e;
 
         /// <summary>
         /// Искомый корень
         /// </summary>
         public static double x;
+
+        /// <summary>
+        /// Прогресс вычисления
+        /// </summary>
+        public static int progress
+        {
+            get { return p; }
+            set
+            {
+                p = value;
+                mainform.progress = value;
+            }
+        }
+
+        private static int p;
+
+        public static MainForm mainform;
     }
 }

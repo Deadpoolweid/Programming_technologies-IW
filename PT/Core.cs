@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PT
 {
@@ -40,6 +36,7 @@ namespace PT
         static public void Find_x()
         {
             double max = Math.Sqrt(B() * B() - 4 * A() * C());
+            Data.progress += 10;
             if (B() + max > B() - max)
             {
                 Data.x =  Data.a - (2 * C() / (B() + max));
@@ -49,7 +46,7 @@ namespace PT
                 Data.x = Data.a - (2 * C() / (B() - max));
 
             }
-
+            Data.progress += 10;
         }
 
     }
